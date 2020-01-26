@@ -72,9 +72,11 @@ nav{
   background-color: #ddd;
   padding: 20px 0; 
   text-align: left;
-
+column-span: all;
+grid-row:1/1;
   /*Your code here*/
   /*Span the top row*/
+
 
 }
 
@@ -89,6 +91,10 @@ header{
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
   /* Span one row */
+
+  column-span: all;
+  grid-row: 2/1;
+  background-image:url(../images/header.jpg);
 }
 
 header p{

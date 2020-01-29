@@ -114,6 +114,67 @@ container{
   grid-row-gap: 15px;
 
 }
+nav{
+  background-color: #ddd;
+  padding: 20px 0; 
+  text-align: left;
+grid-column: 1 / span 3;
+grid-row:1 / span 1;
+  /*Your code here*/
+  /*Span the top row*/
+
+
+}
+.about-image, .method-image, .clients-image, .contact-image{
+   /*Your code here */
+   /* See documentation for mobile view */
+
+grid-column: 1/ span 3;
+   height:700px;
+   grid-row:3/ span 1;
+   grid-row: 4/span 1;
+   grid-row: 5/span 1;
+   grid-row: 6/ span 1;
+   grid-row: 7/span 1;
+}
+.about, .method, .clients, .contact{
+  /*Your code here */
+  /* See documentation for mobile view */
+  grid-column: 2/ span 1;
+   grid-row:3/ span 1;
+   grid-row: 4/span 1;
+   grid-row: 5/span 1;
+   grid-row: 6/ span 1;
+   grid-row: 7/span 1;
+
+}
+header{
+  background-attachment: fixed; /* Parallax effect */     
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  color: white;
+  height: 400px;                /* Parallax effect */
+
+  /* Your code here */
+  /* Set background-image to header.jpg in the images folder */
+  /* Span one row */
+
+  grid-column: 1/ span 3;
+  grid-row: 2/ span 1;
+  background-image: url(../images/header.jpg);
+}
+.text-block{
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  /*Your code here:*/
+  /*Align the content in the center */
+
+}
+
 }
 .about, .method, .clients, .contact{
   /*Your code here */

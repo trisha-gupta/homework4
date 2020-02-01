@@ -108,7 +108,7 @@ header p{
 container{
   /*Your code here  */
   /* See documentation for mobile view */
-
+display: grid;
   grid-template-columns: 100px, 400px, 100px;
   grid-template-rows: 30px,auto,auto,auto,auto,auto,100px;
   grid-row-gap: 15px;
@@ -208,12 +208,18 @@ grid-column: 1/ span 3;
 }
 
 .method, .method-image{
+  grid-column: 1 / -1;
+  grid-row: 4/span 1;
+  max-height: 700px;
+  overflow: hidden;
   /*Your code here */
   /* See documentation for mobile view */
 }
 
 
-.clients, .clients-image{
+.clients, 
+
+.clients-image{
   /*Your code here */
   /* See documentation for mobile view */
 }
@@ -240,6 +246,10 @@ grid-column: 1/ span 3;
 @media all and (min-width: 800px){
 
   .container{
+    display:grid;
+    grid-row: 70px, 400px, 400px, 400px, 400px, 400px, 100px;
+    grid-column:  50px, auto, 500px, auto, 50px;
+
   /*Your code here */
   /* See documentation for desktop view */ 
   }

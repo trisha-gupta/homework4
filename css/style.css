@@ -47,6 +47,9 @@ nav a:hover{
 
   /*Your code here - position relative to the parent */
   /*Your code here - place 40px higher */;
+  position: relative;
+  margin-top:-40px; 
+  
 }
 
 /*Your code here*/
@@ -62,8 +65,8 @@ border around all elements in focus.*/
 footer{
   background-color: black;
   color: white;
-  grid-column: 1 / -1;  /*Can you explain what this does?*/
-  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  grid-column: 1 / 5;  /*Can you explain what this does?*/
+  grid-row: 7 / auto;  	 /*Can you rewrite it?*/
   padding-top: 30px;
   text-align: center;
 }
@@ -72,11 +75,10 @@ nav{
   background-color: #ddd;
   padding: 20px 0; 
   text-align: left;
-grid-column: 1 / span 3;
-grid-row:1 / span 1;
+ grid-column: 1/5;
+ grid-row: 1/ span 1;
   /*Your code here*/
   /*Span the top row*/
-
 
 }
 
@@ -87,14 +89,12 @@ header{
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
-
+background-image: url(../images/header.jpg);
+grid-column:1/5;
+grid-row:2/ span 1;
   /* Your code here */
   /* Set background-image to header.jpg in the images folder */
   /* Span one row */
-
-  grid-column: 1/ span 3;
-  grid-row: 2/ span 1;
-  background-image: url(../images/header.jpg);
 }
 
 header p{
@@ -104,101 +104,63 @@ header p{
   text-align: center;
 }
 
-@media only screen and (max-width: 600px) {
-container{
+
+.container{
+	display: grid;
+	grid-template-columns: 100px, 400px, 100px;
+	grid-template-rows: 30px, auto,auto,auto,auto,auto,100px;
+grid-row-gap: 15px;
   /*Your code here  */
   /* See documentation for mobile view */
-display: grid;
-  grid-template-columns: 100px, 400px, 100px;
-  grid-template-rows: 30px,auto,auto,auto,auto,auto,100px;
-  grid-row-gap: 15px;
 
 }
-nav{
-  background-color: #ddd;
-  padding: 20px 0; 
-  text-align: left;
-grid-column: 1 / span 3;
-grid-row:1 / span 1;
-  /*Your code here*/
-  /*Span the top row*/
-
-
+.about{
+	grid-column: 2 /span 1;
+	grid-row: 3 / span 1;
 }
-.about-image, .method-image, .clients-image, .contact-image{
-   /*Your code here */
-   /* See documentation for mobile view */
-
-grid-column: 1/ span 3;
-   height:700px;
-   grid-row:3/ span 1;
-   grid-row: 4/span 1;
-   grid-row: 5/span 1;
-   grid-row: 6/ span 1;
-   grid-row: 7/span 1;
+.method
+{
+	grid-column: 2 /span 1;
+	grid-row: 4 / span 1;
+	
 }
-.about, .method, .clients, .contact{
+ .clients{
+	 grid-column: 2 /span 1;
+	grid-row: 5 / span 1;
+ } 
+ .contact{
   /*Your code here */
   /* See documentation for mobile view */
-  grid-column: 2/ span 1;
-   grid-row:3/ span 1;
-   grid-row: 4/span 1;
-   grid-row: 5/span 1;
-   grid-row: 6/ span 1;
-   grid-row: 7/span 1;
-
-}
-header{
-  background-attachment: fixed; /* Parallax effect */     
-  background-position: center;  /* Parallax effect */
-  background-repeat: no-repeat; /* Parallax effect */
-  background-size: cover;       /* Parallax effect */
-  color: white;
-  height: 400px;                /* Parallax effect */
-
-  /* Your code here */
-  /* Set background-image to header.jpg in the images folder */
-  /* Span one row */
-
-  grid-column: 1/ span 3;
-  grid-row: 2/ span 1;
-  background-image: url(../images/header.jpg);
-}
-.text-block{
-  background-color: rgba(255, 255, 255, .8);
-  border: 10px solid black;
-  padding: 30px;
-  justify-content: center;
-  align-items: center;
-  /*Your code here:*/
-  /*Align the content in the center */
+  grid-column: 2 /span 1;
+	grid-row: 6 / span 1;
 
 }
 
+.about-image{
+	grid-column: 1 / 5;
+	max-height: 700px;
+	overflow: hidden;
+	grid-row: 3 / span 1;
 }
-.about, .method, .clients, .contact{
-  /*Your code here */
-  /* See documentation for mobile view */
-  grid-column: 2/ span 1;
-   grid-row:3/ span 1;
-   grid-row: 4/span 1;
-   grid-row: 5/span 1;
-   grid-row: 6/ span 1;
-   grid-row: 7/span 1;
-
+.method-image{
+ grid-column: 1 /  5;
+	max-height: 700px;
+	overflow: hidden;
+	grid-row: 4 / span 1;
+}	
+.clients-image{
+	grid-column: 1 /  5;
+	max-height: 700px;
+	overflow: hidden;
+	grid-row: 5 / span 1;
 }
-
-.about-image, .method-image, .clients-image, .contact-image{
+ .contact-image{
    /*Your code here */
    /* See documentation for mobile view */
-
-grid-column: 1/ span 3;
-   height:700px;
-   grid-row:3/ span 1;
-   grid-row: 4/span 1;
-   grid-row: 5/span 1;
-   grid-row: 6/ span 1;
-   grid-row: 7/span 1;
+   grid-column: 1 / 5;
+	max-height: 700px;
+	overflow: hidden;
+	grid-row: 6 / span 1;
 }
 
 .about, .about-image{
@@ -208,18 +170,12 @@ grid-column: 1/ span 3;
 }
 
 .method, .method-image{
-  grid-column: 1 / -1;
-  grid-row: 4/span 1;
-  max-height: 700px;
-  overflow: hidden;
   /*Your code here */
   /* See documentation for mobile view */
 }
 
 
-.clients, 
-
-.clients-image{
+.clients, .clients-image{
   /*Your code here */
   /* See documentation for mobile view */
 }
@@ -234,10 +190,10 @@ grid-column: 1/ span 3;
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  justify-content: center;
-  align-items: center;
   /*Your code here:*/
   /*Align the content in the center */
+  align:center;
+ 
 
 }
 
@@ -246,13 +202,16 @@ grid-column: 1/ span 3;
 @media all and (min-width: 800px){
 
   .container{
-    display:grid;
-    grid-row: 70px, 400px, 400px, 400px, 400px, 400px, 100px;
-    grid-column:  50px, auto, 500px, auto, 50px;
-
   /*Your code here */
   /* See documentation for desktop view */ 
+  display: grid;
+  grid-columns: 50px, auto, 500px, auto,50px;
+  grid-rows: 70px, 400px, 400px, 400px, 400px, 400px,100px;
   }
+  .header{
+	  grid-column:1/-1;
+  }
+  
 
   nav{
     background-color: #ddd;
@@ -261,12 +220,18 @@ grid-column: 1/ span 3;
     align-self: center;
   }
 
-  .about, .clients, .method-image, .contact-image{
+  .about, .clients, .method-image, .contact{
+	  grid-column: 3/ span 2;
+  }
+  .clients, .method-image, .contact-image{
   /*Your code here */
   /* See documentation for desktop view */ 
   }
 
-  .about-image, .clients-image, .method, .contact{
+  .about-image, .contact, .method, .clients-image 
+  {
+	grid-column: 2/ span 2;  
+  }  .clients-image, .method, .contact{
     /*Your code here */
     /* See documentation for desktop view */ 
     }

@@ -117,6 +117,7 @@ grid-row-gap: 15px;
 .about{
 	grid-column: 2 /span 1;
 	grid-row: 3 / span 1;
+	
 }
 .method
 {
@@ -190,9 +191,15 @@ grid-row-gap: 15px;
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
+  vertical-align:center;
   /*Your code here:*/
   /*Align the content in the center */
-  align:center;
+  margin:auto;
+  margin-right:5%;
+  margin-left:5%;
+  
+	
+	
  
 
 }
@@ -209,7 +216,7 @@ grid-row-gap: 15px;
   grid-rows: 70px, 400px, 400px, 400px, 400px, 400px,100px;
   }
   .header{
-	  grid-column:1/-1;
+	  grid-column:1/5;
   }
   
 

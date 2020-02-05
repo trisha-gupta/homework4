@@ -55,7 +55,10 @@ nav a:hover{
 /*Your code here*/
 /*Add the selector and rule to move the skip 
 link to the exact top of the page.*/
- 
+ .skip a:focus, .skip a:active{
+  left: 0;
+  margin: 0;
+ }
 
 /*Your code here*/
 /*Add the selector and code to put a 2px black 
@@ -107,8 +110,8 @@ header p{
 
 .container{
 	display: grid;
-	grid-template-columns: 100px, 400px, 100px;
-	grid-template-rows: 30px, auto,auto,auto,auto,auto,100px;
+	grid-template-columns: 100px 400px 100px;
+	grid-template-rows: 30px auto auto auto auto auto 100px;
 grid-row-gap: 15px;
   /*Your code here  */
   /* See documentation for mobile view */
@@ -138,19 +141,19 @@ grid-row-gap: 15px;
 }
 
 .about-image{
-	grid-column: 1 / 5;
+	grid-column: 1 / -1;
 	max-height: 700px;
 	overflow: hidden;
 	grid-row: 3 / span 1;
 }
 .method-image{
- grid-column: 1 /  5;
+ grid-column: 1 /  -1;
 	max-height: 700px;
 	overflow: hidden;
 	grid-row: 4 / span 1;
 }	
 .clients-image{
-	grid-column: 1 / 5;
+	grid-column: 1 / -1;
 	max-height: 700px;
 	overflow: hidden;
 	grid-row: 5 / span 1;
@@ -158,7 +161,7 @@ grid-row-gap: 15px;
  .contact-image{
    /*Your code here */
    /* See documentation for mobile view */
-   grid-column: 1 / 5;
+   grid-column: 1 / -1;
 	max-height: 700px;
 	overflow: hidden;
 	grid-row: 6 / span 1;
@@ -212,8 +215,8 @@ grid-row-gap: 15px;
   /*Your code here */
   /* See documentation for desktop view */ 
   display: grid;
-  grid-columns: 50px, auto, 500px, auto,50px;
-  grid-rows: 70px, 400px, 400px, 400px, 400px, 400px,100px;
+  grid-template-columns: 50px auto 500px auto 50px;
+  grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
   .header{
 	  grid-column:1/5;

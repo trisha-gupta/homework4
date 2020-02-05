@@ -47,7 +47,7 @@ nav a:hover{
 
   /*Your code here - position relative to the parent */
   /*Your code here - place 40px higher */;
-  position: relative;
+  position: absolute;
   margin-top:-40px; 
   
 }
@@ -65,7 +65,7 @@ border around all elements in focus.*/
 footer{
   background-color: black;
   color: white;
-  grid-column: 1 / 5;  /*Can you explain what this does?*/
+  grid-column: 1 /5;  /*Can you explain what this does?*/
   grid-row: 7 / auto;  	 /*Can you rewrite it?*/
   padding-top: 30px;
   text-align: center;
@@ -150,7 +150,7 @@ grid-row-gap: 15px;
 	grid-row: 4 / span 1;
 }	
 .clients-image{
-	grid-column: 1 /  5;
+	grid-column: 1 / 5;
 	max-height: 700px;
 	overflow: hidden;
 	grid-row: 5 / span 1;
@@ -191,12 +191,12 @@ grid-row-gap: 15px;
   background-color: rgba(255, 255, 255, .8);
   border: 10px solid black;
   padding: 30px;
-  vertical-align:center;
-  /*Your code here:*/
+
+   /*Your code here:*/
   /*Align the content in the center */
-  margin:auto;
-  margin-right:5%;
-  margin-left:5%;
+
+  justify-self: center;  
+  align-self: center;
   
 	
 	
@@ -230,7 +230,9 @@ grid-row-gap: 15px;
   .about, .clients, .method-image, .contact{
 	  grid-column: 3/ span 2;
   }
-  .clients, .method-image, .contact-image{
+  .clients, .method-image{}
+  .contact-image{
+    grid-column: 3/ span 2;
   /*Your code here */
   /* See documentation for desktop view */ 
   }

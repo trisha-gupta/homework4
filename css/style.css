@@ -48,7 +48,7 @@ nav a:hover{
   /*Your code here - position relative to the parent */
   /*Your code here - place 40px higher */;
   position: absolute;
-  margin-top:-40px; 
+  top:-40px; 
   
 }
 
@@ -57,7 +57,7 @@ nav a:hover{
 link to the exact top of the page.*/
  .skip a:focus{
   left: 0;
-  margin: 0;
+  top: 0;
  }
 
 /*Your code here*/
@@ -94,7 +94,7 @@ header{
   background-size: cover;       /* Parallax effect */
   color: white;
   height: 400px;                /* Parallax effect */
-background-image: url(../images/header.jpg);
+background-image: url("../images/header.jpg");
 grid-column:1/-1;
 grid-row:2/ span 1;
   /* Your code here */
@@ -214,12 +214,12 @@ grid-row-gap: 15px;
 @media all and (min-width: 800px){
 
   .container{
-  /*Your code here */
-  /* See documentation for desktop view */ 
+ 
   display: grid;
   grid-template-columns: 50px auto 500px auto 50px;
   grid-template-rows: 70px 400px 400px 400px 400px 400px 100px;
   }
+
   .header{
 	  grid-column:1/5;
   }
@@ -252,11 +252,11 @@ grid-row-gap: 15px;
     }
 
 
-}  /*End the media query*/
+}  /*End the media query*/ 
 
 @media screen and (prefers-reduced-motion: reduce){
   html{ 
-      scroll-behavior: auto; /* Removes scroll animation */
+      scroll-behavior: auto;  /*Removes scroll animation */
   }
 
   .skip a{

@@ -93,6 +93,7 @@ header{
   background-repeat: no-repeat; /* Parallax effect */
   background-size: cover;       /* Parallax effect */
   color: white;
+  background-color:#575757;
   height: 400px;                /* Parallax effect */
 background-image: url("../images/header.jpg");
 grid-column:1/-1;
